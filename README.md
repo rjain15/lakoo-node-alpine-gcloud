@@ -2,7 +2,7 @@
 
 Simple base image containing nodejs, git and gcloud sdk for ci usage
 
-Base on https://hub.docker.com/_/node/ , image `node:8-alpine`
+Base on https://hub.docker.com/_/node/ , image `node:9-alpine`
 
 ## Components included
 * node
@@ -11,3 +11,4 @@ Base on https://hub.docker.com/_/node/ , image `node:8-alpine`
 * gcloud
 * gzip
 * kubectl
+* yarn

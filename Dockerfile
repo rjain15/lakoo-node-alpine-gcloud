@@ -1,5 +1,5 @@
-FROM node:8-alpine
-MAINTAINER William Chong <williamchong@lakoo.com>
+FROM node:9-alpine
+MAINTAINER Rajesh Jain <rjain15@gmail.com>
 
 RUN mkdir -p /opt
 WORKDIR /opt
@@ -12,6 +12,7 @@ RUN apk add --no-cache \
 	openssh-client \
 	python \
 	tar \
+	yarn \
 	gzip
 
 ENV CLOUDSDK_PYTHON_SITEPACKAGES 1
