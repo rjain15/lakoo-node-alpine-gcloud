@@ -12,3 +12,4 @@ Base on https://hub.docker.com/_/node/ , image `node:9-alpine`
 * gzip
 * kubectl
 * yarn
+* docker
