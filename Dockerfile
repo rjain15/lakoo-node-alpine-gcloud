@@ -6,8 +6,10 @@ WORKDIR /opt
 
 RUN apk add --no-cache \
 	bash \
+	openrc \
 	ca-certificates \
 	curl \
+	docker \
 	git \
 	openssh-client \
 	python \
@@ -24,5 +26,9 @@ RUN sed -i -- 's/\"disable_updater\": false/\"disable_updater\": true/g' /opt/go
 RUN mkdir ${HOME}/.ssh
 ENV PATH /opt/google-cloud-sdk/bin:$PATH
 
-WORKDIR /root
+RUN apk update
+RUN rc-update add docker boot
+RUN service docker start
+
+WORKDIR /app
 CMD bash
