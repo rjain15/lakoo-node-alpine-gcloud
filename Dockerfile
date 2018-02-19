@@ -1,4 +1,4 @@
-FROM node:9.3.0-alpine
+FROM node:9.5.0-alpine
 MAINTAINER Rajesh Jain <rjain15@gmail.com>
 
 RUN mkdir -p /opt
@@ -28,7 +28,7 @@ ENV PATH /opt/google-cloud-sdk/bin:$PATH
 
 RUN apk update
 RUN rc-update add docker boot
-RUN service docker start
+# RUN service docker start
 
 WORKDIR /app
 CMD bash
