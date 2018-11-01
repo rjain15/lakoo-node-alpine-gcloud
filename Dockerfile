@@ -1,4 +1,4 @@
-FROM node:9.5.0-alpine
+FROM node:10.10.0-alpine
 MAINTAINER Rajesh Jain <rjain15@gmail.com>
 
 RUN mkdir -p /opt
